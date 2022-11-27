@@ -1,5 +1,5 @@
 import "./App.css";
-import { ChakraProvider, Heading, Image, Flex, Button } from "@chakra-ui/react";
+import { ChakraProvider, Heading, Image, Flex } from "@chakra-ui/react";
 import vaquitaLogo from "./vaquita.jpeg";
 import Footer from "./components/Footer";
 import { CTA } from "./components/CTA";
@@ -13,7 +13,8 @@ function App() {
 					align='center'
 					justifyContent='center'
 					w='full'
-					h='90vh'
+					h={{ base: "85vh", md: "90vh" }}
+					p={{ base: "40px", lg: 0 }}
 					bg={colorLogo}
 					color='white'
 				>
@@ -22,16 +23,19 @@ function App() {
 						justifyContent='center'
 						flexDirection='column'
 						w={{ base: "100%", lg: "75%" }}
-						h={{ base: "100vh", lg: "100vh" }}
+						h='100%'
 					>
-						<Heading
-							as='h1'
-							size={{ base: "md", lg: "2xl" }}
-							fontFamily='Kitsch'
-						>
-							Bienvenidos
+						<Heading as='h1' size='2xl' fontFamily='Kitsch'>
+							BIENVENIDOS
 						</Heading>
-						<Flex align='center' justifyContent='space-around'>
+						<Flex
+							align='center'
+							justifyContent={{
+								base: "center",
+								md: "space-around",
+							}}
+							flexDirection={{ base: "column", md: "flex" }}
+						>
 							<Flex>
 								<Image src={vaquitaLogo} />
 							</Flex>
@@ -41,8 +45,9 @@ function App() {
 						</Flex>
 					</Flex>
 				</Flex>
+
+				<Footer />
 			</div>
-			<Footer />
 		</ChakraProvider>
 	);
 }

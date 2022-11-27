@@ -12,25 +12,9 @@ import * as React from "react";
 const colorLogo = "#5ac4c2";
 export const CTA = () => (
 	<Box as='section' bg='bg-surface' fontFamily='Kitsch'>
-		<Container
-			py={{
-				base: "16",
-				md: "24",
-			}}
-		>
-			<Stack
-				spacing={{
-					base: "8",
-					md: "10",
-				}}
-			>
-				<Stack
-					spacing={{
-						base: "4",
-						md: "5",
-					}}
-					align='center'
-				>
+		<Container>
+			<Stack>
+				<Stack align='center'>
 					<Heading
 						size={useBreakpointValue({
 							base: "sm",
@@ -41,7 +25,7 @@ export const CTA = () => (
 						fontFamily='Kitsch'
 						fontWeight='bold'
 					>
-						Te animas a probar?
+						TE ANIMAS A PROBAR?
 					</Heading>
 				</Stack>
 				<Stack
@@ -62,7 +46,7 @@ export const CTA = () => (
 							color: colorLogo,
 						}}
 					>
-						En otro momento...
+						En otro momento
 					</Button>
 					<Button
 						as='a'
@@ -77,7 +61,7 @@ export const CTA = () => (
 							color: colorLogo,
 						}}
 					>
-						De una
+						Conocer más!
 					</Button>
 				</Stack>
 			</Stack>
